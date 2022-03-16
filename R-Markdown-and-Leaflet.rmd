@@ -1,0 +1,21 @@
+---
+title: "R-Markdown-and-Leaflet"
+author: "Sai Gayathri J S"
+date: '2022-03-16'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE)
+```
+
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+m_map <- leaflet() %>% addTiles()   
+m_map <- m_map %>% addMarkers(lat= 40.4395932, lng= -79.9893378, popup="Piitsburgh Penguins play here")
+m_map  
+```
